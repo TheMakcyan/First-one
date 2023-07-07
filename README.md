@@ -1,10 +1,11 @@
 For detailed installation instructions, consult the docs.
 To install and start the local server for development, simply run:
 ```shell
-py -m venv mysite
+py -m venv path\to\mysite
 ```
 And put files from archive into mysite directory and then type:
 ```shell
+cd path\to\mysite
 Scripts\Activate.ps1
 ```
 Then you need to install required packages. To do this run:
