@@ -1,7 +1,7 @@
 For detailed installation instructions, consult the docs.
 First of all you need to install Django. To do this run:
 ```shell
-pip install django
+python3 -m pip install -r requirements.txt
 ```
 To install and start the local server for development, simply run:
 ```shell
