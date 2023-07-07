@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'drf_spectacular_sidecar',
     'drf_spectacular',
     'rest_framework',
     "polls.apps.PollsConfig",
@@ -132,21 +131,8 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 SPECTACULAR_SETTINGS = {
-    'SWAGGER_UI_DIST': 'SIDECAR',  # shorthand to use the sidecar instead
-    'SWAGGER_UI_FAVICON_HREF': 'SIDECAR',
-    'REDOC_DIST': 'SIDECAR',
     'TITLE': 'Your Project API',
     'DESCRIPTION': 'Your project description',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
-    "SWAGGER_UI_SETTINGS": {
-        "deepLinking": True,
-        "persistAuthorization": True,
-        "displayOperationId": True,
-
-    },
-    # available SwaggerUI versions: https://github.com/swagger-api/swagger-ui/releases
-    #"SWAGGER_UI_DIST": "//unpkg.com/swagger-ui-dist@3.35.1", # default
-    #"SWAGGER_UI_FAVICON_HREF": settings.STATIC_URL + "your_company_favicon.png",
-    # OTHER SETTINGS
-}
+    }
