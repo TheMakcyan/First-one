@@ -5,7 +5,6 @@
   Django (2.2, 3.2, 4.0, 4.1, 4.2)
   Django REST Framework (3.10.3, 3.11, 3.12, 3.13, 3.14)
   drf-spectacular
-  drf-spectacular[sidecar]
 py manage.py runserver 
 ???
 Profit
