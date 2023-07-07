@@ -29,8 +29,6 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticated]
-
-
 class GroupViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
@@ -41,7 +39,6 @@ class GroupViewSet(viewsets.ModelViewSet):
 class IndexView(generic.ListView):
     template_name = "polls/index.html"
     context_object_name = "latest_question_list"
-
     def get_queryset(self):
         """
         Return the last five published questions (not including those set to be
@@ -50,22 +47,12 @@ class IndexView(generic.ListView):
         return Question.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")[
                :5
                ]
-
-
 class DetailView(generic.DetailView):
     model = Question
     template_name = "polls/detail.html"
-
-
 class ResultsView(generic.DetailView):
     model = Question
     template_name = "polls/results.html"
-
-
-# Create your views here.
-
-
-
 
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
